@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        <h1>Chat Room</h1>
+        <h3 style="color:#FF0000">{{wrong_cr}}</h3>
+        <h3 style="color:"#008000">{{user_cr}}</h3>
+        <form action="/" method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }}: {{ form.username() }} {% for error in form.username.errors %}{{ error }}{% endfor %}<br/>
+            {{ form.password.label }}: {{ form.password() }} {% for error in form.password.errors %}{{ error }}{% endfor %}<br/>
+
+            {{ form.submit() }}
+        </form>
+        <a href="/signup">Create New User Account</a>
+    </body>
+</html>

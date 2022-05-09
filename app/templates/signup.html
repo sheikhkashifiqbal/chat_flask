@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title> Signup </title>
+    </head>
+    <body>
+        <h3 style="color:#FF0000">{{already_cr}}</h3>
+        <h1>User Signup</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }}: {{ form.username() }} {% for error in form.username.errors %}{{ error }}{% endfor %}<br/>
+            {{ form.fname.label }}: {{ form.fname() }} {% for error in form.fname.errors %}{{ error }}{% endfor %}<br/>
+            {{ form.lname.label }}: {{ form.lname() }} {% for error in form.lname.errors %}{{ error }}{% endfor %}<br/>
+            {{ form.email.label }}: {{ form.email() }} {% for error in form.email.errors %}{{ error }}{% endfor %}<br/>
+
+
+            {{ form.password.label }}: {{ form.password() }} {% for error in form.password.errors %}{{ error }}{% endfor %}<br/>
+
+            {{ form.submit() }}
+        </form>
+        <a href="/">Back To Signin</a>
+    </body>
+</html>
